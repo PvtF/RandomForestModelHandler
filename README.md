@@ -84,12 +84,12 @@ Import the necessary class (either **RandomForestModelSingleOutput** or **Random
 from path.to.module import RandomForestModelSingleOutput, RandomForestModelMultiOutput
 
 # Single Model
-single_model = RandomForestModelSingleOutput(log_filename='training.log')
+single_model = RandomForestModelSingleOutput(log_filename='single_training.log')
 single_model.quick_train(X, y, chosen_params={'n_estimators': 100}, normalize=True)
 predictions = single_model.predict_response(single_test_data, normalize=True)
 
 # Multi Model
-multi_model = RandomForestModelMultiOutput(log_filename='training.log')
+multi_model = RandomForestModelMultiOutput(log_filename='multi_training.log')
 multi_model.quick_train(X, Y, chosen_params={'n_estimators': 100}, normalize=True)
 predictions = multi_model.predict_response(multi_test_data, normalize=True)
 ```
